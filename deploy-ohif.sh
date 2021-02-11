@@ -41,6 +41,7 @@ replace_statement='s/OAUTH_CLIENT_ID/'$client_id'/g'
 hostname_replace='s/HOST_NAME/'$external_ip'/g'
 
 sed -i $hostname_replace OHIF/platform/viewer/.webpack/webpack.pwa.js
+sed -i $hostname_replace OHIF/platform/viewer/public/config/google.js
 echo "Assigned Hostname"
 sed -i $replace_statement OHIF/platform/viewer/public/config/google.js
 echo "Assigned ClientID"
@@ -55,5 +56,6 @@ default_client='s/'$client_id'/OAUTH_CLIENT_ID/g'
 default_hostname='s/'$external_ip'/HOST_NAME/g'
 
 sed -i $default_hostname OHIF/platform/viewer/.webpack/webpack.pwa.js
+sed -i $default_hostname OHIF/platform/viewer/public/config/google.js
 sed -i $default_client OHIF/platform/viewer/public/config/google.js
 

@@ -40,6 +40,7 @@ properties:
     type: integer
     title: OHIF Replica Count
     description: The number of OHIF Viewer replicas to deploy
+    default: 1
   oauth_client_id:
     type: string
     title: OAuth 2.0 Client ID 

@@ -39,11 +39,11 @@ spec:
         - containerPort: 3000
         resources:
           limits:
-            cpu: "5"
-            memory: "3G"
+            cpu: 500m
+            memory: 3G
           requests:
-            cpu: "2"
-            memory: "500M"
+            cpu: 300m
+            memory: 1G
 ---
 apiVersion: "autoscaling/v2beta1"
 kind: "HorizontalPodAutoscaler"
